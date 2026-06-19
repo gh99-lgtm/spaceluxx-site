@@ -227,29 +227,26 @@
     max-width: 60ch; margin-bottom: 48px; line-height: 1.7;
   }
 
-  /* ─── Capabilities ─── */
-  .capabilities-grid {
+  /* ─── Capabilities (editorial list) ─── */
+  .cap-list {
+    border-top: 1px solid var(--cream-line);
+  }
+  .cap-item {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--cream-line);
-    border: 1px solid rgba(42,37,32,0.08);
-    border-radius: 3px;
+    grid-template-columns: 60px 1fr;
+    gap: 0 24px;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--cream-line);
+    transition: padding-left 0.3s;
   }
-  .cap-card {
-    background: var(--cream);
-    padding: 36px 32px;
-    transition: background 0.3s;
-  }
-  .cap-card:hover { background: var(--cream-dim); }
-  .cap-num { font-size: 11px; letter-spacing: 0.14em; color: var(--bronze); margin-bottom: 14px; }
+  .cap-item:hover { padding-left: 8px; }
+  .cap-num { font-size: 11px; letter-spacing: 0.14em; color: var(--bronze); padding-top: 4px; }
   .cap-name {
     font-family: 'Instrument Serif', Georgia, serif;
     font-size: 1.35rem; font-weight: 400;
     color: var(--cream-text); margin-bottom: 10px;
   }
-  .cap-desc { font-size: 0.9rem; color: var(--cream-muted); line-height: 1.6; max-width: 44ch; }
-  .cap-card.empty { background: transparent; border: none; pointer-events: none; }
+  .cap-desc { font-size: 0.9rem; color: var(--cream-muted); line-height: 1.6; max-width: 56ch; }
 
   /* ─── Engagements ─── */
   .engagements-row {
@@ -292,11 +289,18 @@
   .result-label { font-size: 0.88rem; color: var(--cream-text); line-height: 1.5; margin-bottom: 8px; }
   .result-context { font-size: 0.76rem; color: var(--cream-faint); letter-spacing: 0.02em; }
 
-  /* ─── Principles ─── */
-  .principles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
-  .principle-num { font-size: 11px; letter-spacing: 0.14em; color: var(--bronze); margin-bottom: 16px; }
-  .principle-title { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.3rem; color: var(--cream-text); margin-bottom: 12px; }
-  .principle-desc { font-size: 0.9rem; color: var(--cream-muted); line-height: 1.6; }
+  /* ─── How We Start (steps) ─── */
+  .steps-tagline {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--bronze);
+    margin-bottom: 40px;
+  }
+  .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+  .step-num { font-size: 11px; letter-spacing: 0.14em; color: var(--bronze); margin-bottom: 16px; }
+  .step-title { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.3rem; color: var(--cream-text); margin-bottom: 12px; }
+  .step-desc { font-size: 0.9rem; color: var(--cream-muted); line-height: 1.6; }
 
   /* ─── FAQ ─── */
   .faq-list { max-width: 680px; }
@@ -379,12 +383,10 @@
 
   /* ─── Responsive ─── */
   @media (max-width: 900px) {
-    .capabilities-grid { grid-template-columns: 1fr; }
     .engagements-row { grid-template-columns: 1fr; }
     .results-grid { grid-template-columns: 1fr; }
-    .principles-grid { grid-template-columns: 1fr; gap: 36px; }
+    .steps-grid { grid-template-columns: 1fr; gap: 36px; }
     .nav-links { display: none; }
-    .cap-card.empty { display: none; }
   }
   @media (max-width: 600px) {
     .hero h1 { font-size: 3.2rem; }
@@ -442,33 +444,42 @@
       <div class="section-title serif">Five disciplines, one standard.</div>
       <p class="section-lead">Revenue doesn't specialize narrowly, and neither do we. These are the practices we bring to every engagement.</p>
     </div>
-    <div class="capabilities-grid reveal">
-      <div class="cap-card">
+    <div class="cap-list reveal">
+      <div class="cap-item">
         <div class="cap-num">01</div>
-        <div class="cap-name serif">Revenue Strategy & Advisory</div>
-        <p class="cap-desc">Operator-level advisory for business leaders and internal teams. Lead generation, funnel architecture, deal closing, and the strategy work that moves pipeline.</p>
+        <div>
+          <div class="cap-name serif">Revenue Strategy & Advisory</div>
+          <p class="cap-desc">Operator-level advisory for business leaders and internal teams. Lead generation, funnel architecture, deal closing, and the strategy work that moves pipeline.</p>
+        </div>
       </div>
-      <div class="cap-card">
+      <div class="cap-item">
         <div class="cap-num">02</div>
-        <div class="cap-name serif">AI Automation & Workflow</div>
-        <p class="cap-desc">Custom AI systems that reduce costs, compress timelines, and widen margins. Content pipelines, research agents, operational workflows — built to run without supervision.</p>
+        <div>
+          <div class="cap-name serif">AI Automation & Workflow</div>
+          <p class="cap-desc">Custom AI systems that reduce costs, compress timelines, and widen margins. Content pipelines, research agents, operational workflows — built to run without supervision.</p>
+        </div>
       </div>
-      <div class="cap-card">
+      <div class="cap-item">
         <div class="cap-num">03</div>
-        <div class="cap-name serif">Social Media, Content & Ad Creative</div>
-        <p class="cap-desc">Social media growth, content production, and paid creative — from organic strategy to AI-generated UGC and ad systems built for volume. We grow accounts, create the content, and build the funnels that turn followers into revenue.</p>
+        <div>
+          <div class="cap-name serif">Social Media, Content & Ad Creative</div>
+          <p class="cap-desc">Social media growth, content production, and paid creative — from organic strategy to AI-generated UGC and ad systems built for volume. We grow accounts, create the content, and build the funnels that turn followers into revenue.</p>
+        </div>
       </div>
-      <div class="cap-card">
+      <div class="cap-item">
         <div class="cap-num">04</div>
-        <div class="cap-name serif">Software & App Development</div>
-        <p class="cap-desc">Native iOS, mobile, MicroSaaS, and full SaaS builds. From single-purpose utilities to multi-tenant platforms across health, finance, medical, and consumer verticals.</p>
+        <div>
+          <div class="cap-name serif">Software & App Development</div>
+          <p class="cap-desc">Native iOS, mobile, MicroSaaS, and full SaaS builds. From single-purpose utilities to multi-tenant platforms across health, finance, medical, and consumer verticals.</p>
+        </div>
       </div>
-      <div class="cap-card">
+      <div class="cap-item">
         <div class="cap-num">05</div>
-        <div class="cap-name serif">Brand Building</div>
-        <p class="cap-desc">Zero-to-one brand development. Positioning, identity, product strategy, and the launch infrastructure to generate revenue in days — not quarters.</p>
+        <div>
+          <div class="cap-name serif">Brand Building</div>
+          <p class="cap-desc">Zero-to-one brand development. Positioning, identity, product strategy, and the launch infrastructure to generate revenue in days — not quarters.</p>
+        </div>
       </div>
-      <div class="cap-card empty"></div>
     </div>
   </div>
 </section>
@@ -479,7 +490,6 @@
     <div class="reveal">
       <div class="section-eyebrow">Current work</div>
       <div class="section-title serif">A cross-section of active engagements.</div>
-      <p class="section-lead">Not a complete list. Projects vary in scope, sector, and stage.</p>
     </div>
     <div class="engagements-row reveal">
       <div class="eng-card">
@@ -558,28 +568,29 @@
   </div>
 </section>
 
-<!-- Principles -->
+<!-- How We Start -->
 <section class="cream-section" id="principles">
   <div class="wrap">
     <div class="reveal">
-      <div class="section-eyebrow">How we work</div>
-      <div class="section-title serif">Three principles.</div>
+      <div class="section-eyebrow">How we start</div>
+      <div class="section-title serif">Working with us.</div>
+      <div class="steps-tagline">Selective, fast, and built to last.</div>
     </div>
-    <div class="principles-grid reveal">
+    <div class="steps-grid reveal">
       <div>
-        <div class="principle-num">01</div>
-        <div class="principle-title serif">Selective by design.</div>
-        <p class="principle-desc">We take on a fraction of what comes in. The filter is alignment — on pace, scope, and standards. Referrals are welcome, and so is a direct inquiry if there's genuine fit.</p>
+        <div class="step-num">01</div>
+        <div class="step-title serif">Reach out.</div>
+        <p class="step-desc">Email us. No forms, no pitch deck. Just tell us what you're working on.</p>
       </div>
       <div>
-        <div class="principle-num">02</div>
-        <div class="principle-title serif">Fast by default.</div>
-        <p class="principle-desc">Small team, deep stack. No layers between the person you meet and the person doing the work.</p>
+        <div class="step-num">02</div>
+        <div class="step-title serif">Initial conversation.</div>
+        <p class="step-desc">A short call to understand the business, the goals, and the timeline.</p>
       </div>
       <div>
-        <div class="principle-num">03</div>
-        <div class="principle-title serif">Built to keep working.</div>
-        <p class="principle-desc">We ship systems, not deliverables. Everything we build is designed to run — and to be maintained — after we're gone.</p>
+        <div class="step-num">03</div>
+        <div class="step-title serif">Mutual fit.</div>
+        <p class="step-desc">We'll both know quickly if there's alignment. If there is, we move forward.</p>
       </div>
     </div>
   </div>
