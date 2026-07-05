@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SpaceLuxx LLC — A multi-disciplinary studio</title>
-<meta name="description" content="SpaceLuxx — We grow businesses and build the systems behind them. Revenue consulting, AI automation, social media, content, and software.">
+<title>SpaceLuxx — The Future of Revenue Scaling</title>
+<meta name="description" content="SpaceLuxx — We grow businesses and build the systems behind them. Revenue consulting, AI infrastructure, social media, and acquisition systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
     --cream-text: #2A2520;
     --cream-muted: #6B6358;
     --cream-faint: #9B9488;
-    --cream-line: rgba(42, 37, 32, 0.1);
+    --cream-line: rgba(42,37,32,0.1);
     --bronze: #B8874A;
     --bronze-glow: #C99A5A;
     --champagne: #E8D4A8;
@@ -26,28 +26,22 @@
     --bone-dim: #B8B3A8;
     --muted: #7A7670;
     --faint: #4A4640;
-    --ink-line: rgba(232, 228, 220, 0.08);
-    --ink-line-strong: rgba(232, 228, 220, 0.14);
+    --ink-line: rgba(232,228,220,0.08);
+    --ink-line-strong: rgba(232,228,220,0.14);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--cream);
     color: var(--cream-text);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: 16px; line-height: 1.65;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
-
   ::selection { background: var(--bronze); color: var(--ink-deep); }
-
   .serif { font-family: 'Instrument Serif', Georgia, serif; }
-
   .wrap { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
 
   /* ─── Nav ─── */
@@ -58,22 +52,20 @@
     border-bottom: 1px solid transparent;
   }
   nav.hero-mode { background: transparent; }
-  nav.hero-mode a, nav.hero-mode .nav-link { color: rgba(232,228,220,0.45); }
-  nav.hero-mode a:hover, nav.hero-mode .nav-link:hover { color: var(--bone); }
+  nav.hero-mode a { color: rgba(232,228,220,0.45); }
+  nav.hero-mode a:hover { color: var(--bone); }
   nav.hero-mode .wm-space { color: var(--bone); }
   nav.hero-mode .wm-luxx { color: var(--champagne); }
-
   nav.cream-mode {
-    background: rgba(242, 237, 228, 0.92);
+    background: rgba(242,237,228,0.92);
     backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
     border-bottom-color: var(--cream-line);
     box-shadow: 0 1px 8px rgba(0,0,0,0.04);
   }
-  nav.cream-mode a, nav.cream-mode .nav-link { color: var(--cream-muted); }
-  nav.cream-mode a:hover, nav.cream-mode .nav-link:hover { color: var(--cream-text); }
+  nav.cream-mode a { color: var(--cream-muted); }
+  nav.cream-mode a:hover { color: var(--cream-text); }
   nav.cream-mode .wm-space { color: var(--cream-text); }
   nav.cream-mode .wm-luxx { color: var(--bronze); }
-
   nav .nav-inner {
     max-width: 1100px; margin: 0 auto;
     display: flex; align-items: center; justify-content: space-between;
@@ -82,7 +74,7 @@
   .nav-wordmark {
     font-family: 'Instrument Serif', Georgia, serif;
     font-size: 22px; letter-spacing: -0.02em;
-    text-decoration: none; cursor: pointer;
+    text-decoration: none;
   }
   .wm-luxx { font-style: italic; }
   .nav-links { display: flex; gap: 32px; }
@@ -94,111 +86,86 @@
 
   /* ─── Hero ─── */
   .hero {
-    position: relative;
-    min-height: 100vh;
+    position: relative; min-height: 100vh;
     display: flex; align-items: center;
-    background: var(--ink-deep);
-    overflow: hidden;
+    background: var(--ink-deep); overflow: hidden;
   }
-  /* Bronze radial glow */
   .hero::before {
-    content: '';
-    position: absolute;
-    top: 35%; left: 30%;
-    width: 900px; height: 700px;
+    content: ''; position: absolute;
+    top: 30%; left: 28%;
+    width: 1000px; height: 800px;
     background: radial-gradient(ellipse at center,
-      rgba(184, 135, 74, 0.12) 0%,
-      rgba(184, 135, 74, 0.06) 30%,
-      rgba(184, 135, 74, 0.02) 55%,
-      transparent 75%
-    );
-    transform: translate(-30%, -40%);
-    z-index: 0;
-    pointer-events: none;
+      rgba(184,135,74,0.13) 0%, rgba(184,135,74,0.06) 30%,
+      rgba(184,135,74,0.02) 55%, transparent 75%);
+    transform: translate(-30%,-40%);
+    z-index: 0; pointer-events: none;
   }
-  #starfield {
-    position: absolute; inset: 0;
-    z-index: 1;
-  }
-  .hero-content {
-    position: relative; z-index: 2;
-    padding: 160px 0 120px;
-  }
+  #starfield { position: absolute; inset: 0; z-index: 1; }
+  .hero-content { position: relative; z-index: 2; padding: 150px 0 60px; }
   .hero-tag {
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
+    font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted);
     margin-bottom: 40px;
     display: flex; align-items: center; gap: 14px;
   }
   .hero-tag::before {
-    content: '';
-    display: inline-block;
-    width: 40px; height: 1px;
-    background: var(--faint);
+    content: ''; display: inline-block;
+    width: 40px; height: 1px; background: var(--faint);
   }
   .hero h1 {
     font-family: 'Instrument Serif', Georgia, serif;
-    font-size: clamp(4.5rem, 9vw, 7.5rem);
-    font-weight: 400;
-    line-height: 1.0;
-    letter-spacing: -0.03em;
-    margin-bottom: 40px;
+    font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+    font-weight: 400; line-height: 1.08;
+    letter-spacing: -0.02em; color: var(--bone);
+    margin-bottom: 24px; max-width: 20ch;
   }
-  .hero-space { color: var(--bone); }
-  .hero-luxx { color: var(--champagne); font-style: italic; }
-  .hero-dot { color: var(--bronze); }
-
-  /* Thin bronze line under wordmark */
-  .hero-divider {
-    width: 80px; height: 1px;
-    background: linear-gradient(90deg, var(--bronze), transparent);
-    margin-bottom: 36px;
-    opacity: 0.5;
-  }
-
+  .hero h1 em { font-style: italic; color: var(--champagne); }
   .hero-sub {
+    font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+    color: var(--bone-dim); max-width: 56ch;
+    line-height: 1.7; margin-bottom: 56px;
+  }
+
+  /* Proof banner */
+  .proof-banner {
+    position: relative; z-index: 2;
+    padding: 0 0 80px;
+  }
+  .proof-eyebrow {
+    font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--faint);
+    margin-bottom: 20px;
+  }
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--ink-line-strong);
+    border: 1px solid var(--ink-line-strong);
+    border-radius: 3px;
+  }
+  .proof-card {
+    background: rgba(6,10,22,0.7);
+    padding: 24px 20px;
+    backdrop-filter: blur(4px);
+  }
+  .proof-num {
     font-family: 'Instrument Serif', Georgia, serif;
-    font-size: clamp(1.2rem, 2.2vw, 1.55rem);
-    color: var(--bone-dim);
-    max-width: 52ch;
-    line-height: 1.55;
-    font-weight: 400;
+    font-size: 1.6rem; color: var(--bronze);
+    line-height: 1; margin-bottom: 8px;
+    letter-spacing: -0.02em;
   }
-  .hero-body {
-    margin-top: 24px;
-    font-size: 0.95rem;
-    color: var(--muted);
-    max-width: 58ch;
-    line-height: 1.7;
+  .proof-label {
+    font-size: 0.78rem; color: var(--bone-dim);
+    line-height: 1.45;
   }
-  .hero-meta {
-    margin-top: 64px;
-    display: flex; gap: 24px; flex-wrap: wrap;
-    align-items: center;
-  }
-  .hero-meta span {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--faint);
-  }
-  .hero-meta .dot {
-    width: 3px; height: 3px;
-    border-radius: 50%;
-    background: var(--faint);
-  }
+
   .scroll-hint {
-    position: absolute;
-    bottom: 36px; left: 50%;
+    position: absolute; bottom: 36px; left: 50%;
     transform: translateX(-50%);
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--faint);
-    z-index: 2;
-    opacity: 0.5;
+    font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--faint);
+    z-index: 2; opacity: 0.5;
   }
 
   /* ─── Cream sections ─── */
@@ -208,18 +175,15 @@
     border-bottom: 1px solid var(--cream-line);
   }
   .section-eyebrow {
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--bronze);
+    font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--bronze);
     margin-bottom: 16px;
   }
   .section-title {
     font-family: 'Instrument Serif', Georgia, serif;
     font-size: clamp(1.8rem, 3.6vw, 2.8rem);
     font-weight: 400; line-height: 1.08;
-    letter-spacing: -0.02em;
-    color: var(--cream-text);
+    letter-spacing: -0.02em; color: var(--cream-text);
     margin-bottom: 20px;
   }
   .section-lead {
@@ -227,36 +191,96 @@
     max-width: 60ch; margin-bottom: 48px; line-height: 1.7;
   }
 
-  /* ─── Capabilities (editorial list) ─── */
-  .cap-list {
-    border-top: 1px solid var(--cream-line);
-  }
-  .cap-item {
+  /* ─── Pillars (expandable) ─── */
+  .pillars-grid {
     display: grid;
-    grid-template-columns: 60px 1fr;
-    gap: 0 24px;
-    padding: 36px 0;
-    border-bottom: 1px solid var(--cream-line);
-    transition: padding-left 0.3s;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
-  .cap-item:hover { padding-left: 8px; }
-  .cap-num { font-size: 11px; letter-spacing: 0.14em; color: var(--bronze); padding-top: 4px; }
-  .cap-name {
+  .pillar-card {
+    background: white;
+    border: 1px solid rgba(42,37,32,0.06);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+  }
+  .pillar-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .pillar-header {
+    padding: 32px 28px;
+    cursor: pointer;
+    display: flex; justify-content: space-between;
+    align-items: flex-start; gap: 16px;
+    user-select: none;
+    border-top: 2px solid transparent;
+    transition: border-top-color 0.3s;
+  }
+  .pillar-card:hover .pillar-header,
+  .pillar-card.open .pillar-header { border-top-color: var(--bronze); }
+  .pillar-num {
+    font-size: 11px; letter-spacing: 0.14em;
+    color: var(--bronze); margin-bottom: 12px;
+  }
+  .pillar-name {
     font-family: 'Instrument Serif', Georgia, serif;
-    font-size: 1.35rem; font-weight: 400;
-    color: var(--cream-text); margin-bottom: 10px;
+    font-size: 1.3rem; color: var(--cream-text);
+    line-height: 1.2;
   }
-  .cap-desc { font-size: 0.9rem; color: var(--cream-muted); line-height: 1.6; max-width: 56ch; }
+  .pillar-toggle {
+    font-size: 1.3rem; color: var(--cream-faint);
+    flex-shrink: 0; transition: transform 0.25s;
+    line-height: 1; margin-top: 18px;
+  }
+  .pillar-card.open .pillar-toggle { transform: rotate(45deg); }
+  .pillar-body {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 28px;
+  }
+  .pillar-card.open .pillar-body {
+    max-height: 400px;
+    padding: 0 28px 28px;
+  }
+  .pillar-desc {
+    font-size: 0.9rem; color: var(--cream-muted);
+    line-height: 1.65; border-top: 1px solid var(--cream-line);
+    padding-top: 20px;
+  }
+
+  /* ─── Core Engine (dark) ─── */
+  .engine-section {
+    background: var(--ink-deep);
+    padding: 100px 0;
+    position: relative; overflow: hidden;
+  }
+  .engine-section::before {
+    content: ''; position: absolute;
+    top: 50%; left: 60%;
+    width: 600px; height: 500px;
+    background: radial-gradient(ellipse at center,
+      rgba(184,135,74,0.06) 0%, transparent 70%);
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+  }
+  .engine-section .section-eyebrow { color: var(--bronze); }
+  .engine-title {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+    font-weight: 400; line-height: 1.1;
+    letter-spacing: -0.02em; color: var(--bone);
+    margin-bottom: 24px;
+  }
+  .engine-body {
+    font-size: 1rem; color: var(--bone-dim);
+    max-width: 60ch; line-height: 1.75;
+  }
+  .engine-body + .engine-body { margin-top: 16px; }
 
   /* ─── Engagements ─── */
   .engagements-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
   }
   .eng-card {
-    background: white; padding: 28px 24px;
-    border-radius: 3px;
+    background: white; padding: 28px 24px; border-radius: 3px;
     border: 1px solid rgba(42,37,32,0.06);
     border-top: 2px solid transparent;
     transition: border-top-color 0.3s, box-shadow 0.3s;
@@ -269,38 +293,57 @@
   .eng-title { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.1rem; color: var(--cream-text); margin-bottom: 8px; line-height: 1.25; }
   .eng-desc { font-size: 0.82rem; color: var(--cream-muted); line-height: 1.5; }
 
-  /* ─── Results ─── */
-  .results-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+  /* ─── CTA / How We Start ─── */
+  .cta-section {
+    background: var(--cream);
+    padding: 100px 0;
+    border-bottom: 1px solid var(--cream-line);
   }
-  .result-card {
-    background: white; padding: 32px 28px;
-    border-radius: 3px;
-    border: 1px solid rgba(42,37,32,0.06);
+  .steps-list { max-width: 640px; }
+  .step-item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--cream-line);
   }
-  .result-num {
+  .step-head {
+    display: flex; align-items: baseline; gap: 12px;
+    margin-bottom: 8px;
+  }
+  .step-num {
+    font-size: 11px; letter-spacing: 0.14em;
+    color: var(--bronze); flex-shrink: 0;
+  }
+  .step-title {
     font-family: 'Instrument Serif', Georgia, serif;
-    font-size: 2rem; color: var(--bronze);
-    letter-spacing: -0.02em; line-height: 1;
-    margin-bottom: 10px;
+    font-size: 1.15rem; color: var(--cream-text);
   }
-  .result-label { font-size: 0.88rem; color: var(--cream-text); line-height: 1.5; margin-bottom: 8px; }
-  .result-context { font-size: 0.76rem; color: var(--cream-faint); letter-spacing: 0.02em; }
-
-  /* ─── How We Start (steps) ─── */
-  .steps-tagline {
+  .step-desc {
+    font-size: 0.9rem; color: var(--cream-muted);
+    line-height: 1.6; padding-left: 42px;
+  }
+  .step-fine {
+    font-size: 0.75rem; color: var(--cream-faint);
+    padding-left: 42px; margin-top: 6px;
+  }
+  .cta-email-block {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--cream-line);
+  }
+  .cta-email-label {
+    font-size: 0.9rem; color: var(--cream-muted);
+    margin-bottom: 12px;
+  }
+  .cta-email {
     font-family: 'Instrument Serif', Georgia, serif;
-    font-size: 1.1rem;
+    font-size: 1.3rem; color: var(--bronze);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .cta-email:hover { color: var(--cream-text); }
+  .cta-advisory {
+    margin-top: 24px;
+    font-size: 0.82rem; color: var(--cream-faint);
     font-style: italic;
-    color: var(--bronze);
-    margin-bottom: 40px;
   }
-  .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
-  .step-num { font-size: 11px; letter-spacing: 0.14em; color: var(--bronze); margin-bottom: 16px; }
-  .step-title { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.3rem; color: var(--cream-text); margin-bottom: 12px; }
-  .step-desc { font-size: 0.9rem; color: var(--cream-muted); line-height: 1.6; }
 
   /* ─── FAQ ─── */
   .faq-list { max-width: 680px; }
@@ -313,51 +356,22 @@
     gap: 16px; user-select: none;
   }
   .faq-q::after {
-    content: '+';
-    font-family: -apple-system, system-ui, sans-serif;
-    font-size: 1.2rem; color: var(--cream-faint);
-    flex-shrink: 0; transition: transform 0.2s;
+    content: '+'; font-family: system-ui; font-size: 1.2rem;
+    color: var(--cream-faint); flex-shrink: 0;
+    transition: transform 0.2s;
   }
   .faq-item.open .faq-q::after { transform: rotate(45deg); }
   .faq-a {
     font-size: 0.9rem; color: var(--cream-muted);
-    line-height: 1.7; max-height: 0;
-    overflow: hidden;
+    line-height: 1.7; max-height: 0; overflow: hidden;
     transition: max-height 0.35s ease, padding 0.35s ease;
     padding-top: 0;
   }
   .faq-item.open .faq-a { max-height: 300px; padding-top: 16px; }
 
-  /* ─── Contact (dark) ─── */
-  .contact-section {
-    background: var(--ink-deep);
-    padding: 120px 0;
-    text-align: center;
-    position: relative; overflow: hidden;
-  }
-  .contact-section .section-eyebrow { color: var(--bronze); }
-  .contact-title {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 400; color: var(--bone);
-    letter-spacing: -0.02em; margin-bottom: 20px;
-  }
-  .contact-desc {
-    font-size: 1rem; color: var(--bone-dim);
-    max-width: 44ch; margin: 0 auto 32px; line-height: 1.7;
-  }
-  .contact-email {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-size: 1.3rem; color: var(--bronze);
-    text-decoration: none; transition: color 0.2s;
-  }
-  .contact-email:hover { color: var(--champagne); }
-  .contact-note { margin-top: 24px; font-size: 0.78rem; color: var(--faint); letter-spacing: 0.04em; }
-
-  /* ─── Footer (dark) ─── */
+  /* ─── Footer ─── */
   footer {
-    background: var(--ink-deep);
-    padding: 48px 0;
+    background: var(--ink-deep); padding: 48px 0;
     border-top: 1px solid var(--ink-line);
     position: relative; overflow: hidden;
   }
@@ -383,15 +397,16 @@
 
   /* ─── Responsive ─── */
   @media (max-width: 900px) {
+    .proof-grid { grid-template-columns: repeat(2, 1fr); }
+    .pillars-grid { grid-template-columns: 1fr; }
     .engagements-row { grid-template-columns: 1fr; }
-    .results-grid { grid-template-columns: 1fr; }
-    .steps-grid { grid-template-columns: 1fr; gap: 36px; }
     .nav-links { display: none; }
   }
   @media (max-width: 600px) {
-    .hero h1 { font-size: 3.2rem; }
-    .cream-section { padding: 72px 0; }
-    .hero-content { padding: 120px 0 80px; }
+    .hero h1 { font-size: 2.4rem; }
+    .proof-grid { grid-template-columns: 1fr; }
+    .cream-section, .cta-section { padding: 72px 0; }
+    .hero-content { padding: 120px 0 40px; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition-duration: 0s !important; animation: none !important; }
@@ -408,11 +423,10 @@
       <span class="wm-space">Space</span><span class="wm-luxx">Luxx.</span>
     </a>
     <div class="nav-links">
-      <a href="#capabilities">Services</a>
+      <a href="#pillars">Services</a>
       <a href="#work">Work</a>
-      <a href="#results">Results</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="#engine">Approach</a>
+      <a href="#start">Start</a>
     </div>
   </div>
 </nav>
@@ -423,63 +437,106 @@
   <div class="wrap">
     <div class="hero-content">
       <div class="hero-tag">Est. 2022 · Washington, D.C. Metro</div>
-      <h1>
-        <span class="hero-space">Space</span><span class="hero-luxx">Luxx</span><span class="hero-dot">.</span>
-      </h1>
-      <div class="hero-divider"></div>
-      <p class="hero-sub">We grow businesses and build the systems behind them.</p>
-      <p class="hero-body">A multi-disciplinary studio that consults and scales businesses, builds AI-automated workflows, and manages marketing and social media — across every market.</p>
-      <div class="hero-meta">
-        <span>Scroll to explore ↓</span>
+      <h1 class="serif">The Future of <em>Revenue Scaling.</em></h1>
+      <p class="hero-sub">We are the growth engine behind elite solopreneurs, high-earning creator brands, and businesses built to outpace their market.</p>
+    </div>
+    <div class="proof-banner">
+      <div class="proof-eyebrow">Results delivered for our clients</div>
+      <div class="proof-grid">
+        <div class="proof-card">
+          <div class="proof-num serif">3× MoM</div>
+          <p class="proof-label">Revenue growth delivered in 30 days</p>
+        </div>
+        <div class="proof-card">
+          <div class="proof-num serif">24 Hours</div>
+          <p class="proof-label">From launch to first paying customer</p>
+        </div>
+        <div class="proof-card">
+          <div class="proof-num serif">80% / +20%</div>
+          <p class="proof-label">Cost reduction paired with revenue increase, YoY</p>
+        </div>
+        <div class="proof-card">
+          <div class="proof-num serif">2M+</div>
+          <p class="proof-label">Organic views generated in 10 days</p>
+        </div>
+        <div class="proof-card">
+          <div class="proof-num serif">1,000+</div>
+          <p class="proof-label">App signups within 72 hours of launch</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll to explore ↓</div>
+</section>
+
+<!-- Four Pillars -->
+<section class="cream-section" id="pillars">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-eyebrow">What we build</div>
+      <div class="section-title serif">Four pathways to growth. One relentless principle.</div>
+    </div>
+    <div class="pillars-grid reveal">
+      <div class="pillar-card" onclick="this.classList.toggle('open')">
+        <div class="pillar-header">
+          <div>
+            <div class="pillar-num">01</div>
+            <div class="pillar-name serif">Revenue & Growth Systems</div>
+          </div>
+          <div class="pillar-toggle">+</div>
+        </div>
+        <div class="pillar-body">
+          <p class="pillar-desc">Strategic advisory for business leaders and internal teams. We restructure operations, optimize workflows, build funnel architecture, and close the gaps between where revenue is and where it should be.</p>
+        </div>
+      </div>
+      <div class="pillar-card" onclick="this.classList.toggle('open')">
+        <div class="pillar-header">
+          <div>
+            <div class="pillar-num">02</div>
+            <div class="pillar-name serif">AI Infrastructure</div>
+          </div>
+          <div class="pillar-toggle">+</div>
+        </div>
+        <div class="pillar-body">
+          <p class="pillar-desc">Custom AI agents, automated workflows, and intelligent infrastructure — competitor intelligence, lead-scoring CRMs, AI-powered content engines, autonomous research pipelines, customer support bots, internal knowledge bases, and SOP generators. Built to cut overhead and scale output without scaling headcount.</p>
+        </div>
+      </div>
+      <div class="pillar-card" onclick="this.classList.toggle('open')">
+        <div class="pillar-header">
+          <div>
+            <div class="pillar-num">03</div>
+            <div class="pillar-name serif">The Social Engine</div>
+          </div>
+          <div class="pillar-toggle">+</div>
+        </div>
+        <div class="pillar-body">
+          <p class="pillar-desc">End-to-end brand management. Social media growth, short-form and long-form video production at scale, AI-generated ad creative, sponsorship and brand deal acquisition, affiliate systems, and monetization funnels. We grow the audience, create the content, and turn followers into revenue.</p>
+        </div>
+      </div>
+      <div class="pillar-card" onclick="this.classList.toggle('open')">
+        <div class="pillar-header">
+          <div>
+            <div class="pillar-num">04</div>
+            <div class="pillar-name serif">Acquisition & Sales Systems</div>
+          </div>
+          <div class="pillar-toggle">+</div>
+        </div>
+        <div class="pillar-body">
+          <p class="pillar-desc">Rooted in deep buyer psychology. We map the full customer journey — then build the organic funnels, automated outbound lead gen, conversion-optimized landing pages, and strategic paid media across Meta, Google, and LinkedIn to capture and close. All things sales and marketing, systematized.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Capabilities -->
-<section class="cream-section" id="capabilities">
+<!-- Core Engine -->
+<section class="engine-section" id="engine">
   <div class="wrap">
     <div class="reveal">
-      <div class="section-eyebrow">What we do</div>
-      <div class="section-title serif">Five disciplines, one standard.</div>
-      <p class="section-lead">Revenue doesn't specialize narrowly, and neither do we. These are the practices we bring to every engagement.</p>
-    </div>
-    <div class="cap-list reveal">
-      <div class="cap-item">
-        <div class="cap-num">01</div>
-        <div>
-          <div class="cap-name serif">Revenue Strategy & Advisory</div>
-          <p class="cap-desc">Operator-level advisory for business leaders and internal teams. Lead generation, funnel architecture, deal closing, and the strategy work that moves pipeline.</p>
-        </div>
-      </div>
-      <div class="cap-item">
-        <div class="cap-num">02</div>
-        <div>
-          <div class="cap-name serif">AI Automation & Workflow</div>
-          <p class="cap-desc">Custom AI systems that reduce costs, compress timelines, and widen margins. Content pipelines, research agents, operational workflows — built to run without supervision.</p>
-        </div>
-      </div>
-      <div class="cap-item">
-        <div class="cap-num">03</div>
-        <div>
-          <div class="cap-name serif">Social Media, Content & Ad Creative</div>
-          <p class="cap-desc">Social media growth, content production, and paid creative — from organic strategy to AI-generated UGC and ad systems built for volume. We grow accounts, create the content, and build the funnels that turn followers into revenue.</p>
-        </div>
-      </div>
-      <div class="cap-item">
-        <div class="cap-num">04</div>
-        <div>
-          <div class="cap-name serif">Software & App Development</div>
-          <p class="cap-desc">Native iOS, mobile, MicroSaaS, and full SaaS builds. From single-purpose utilities to multi-tenant platforms across health, finance, medical, and consumer verticals.</p>
-        </div>
-      </div>
-      <div class="cap-item">
-        <div class="cap-num">05</div>
-        <div>
-          <div class="cap-name serif">Brand Building</div>
-          <p class="cap-desc">Zero-to-one brand development. Positioning, identity, product strategy, and the launch infrastructure to generate revenue in days — not quarters.</p>
-        </div>
-      </div>
+      <div class="section-eyebrow">Our approach</div>
+      <div class="engine-title serif">The relentless engine behind everything.</div>
+      <p class="engine-body">Whether we're restructuring your sales flow or deploying AI agents, everything is rooted in consumer psychology. We build systems that drive real traffic, reduce overhead, and compound revenue — not for a quarter, but permanently.</p>
+      <p class="engine-body">This is what separates us. Most agencies and advisors build what they think looks good. We build what the customer responds to. Every system, every funnel, every piece of content starts with the buyer — not the brand. It doesn't matter what you think works. It matters what they do.</p>
     </div>
   </div>
 </section>
@@ -526,71 +583,40 @@
   </div>
 </section>
 
-<!-- Results -->
-<section class="cream-section" id="results">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="section-eyebrow">Results</div>
-      <div class="section-title serif">Selected outcomes from recent work.</div>
-    </div>
-    <div class="results-grid reveal">
-      <div class="result-card">
-        <div class="result-num serif">80% / +20%</div>
-        <p class="result-label">Cost reduction paired with revenue increase, year over year.</p>
-        <p class="result-context">Construction & distribution supply</p>
-      </div>
-      <div class="result-card">
-        <div class="result-num serif">3×</div>
-        <p class="result-label">Revenue from a 250K-follower account, outperforming accounts 4× the size.</p>
-        <p class="result-context">Education vertical</p>
-      </div>
-      <div class="result-card">
-        <div class="result-num serif">2M+</div>
-        <p class="result-label">Organic views in 10 days.</p>
-        <p class="result-context">Beauty vertical</p>
-      </div>
-      <div class="result-card">
-        <div class="result-num serif">1,000+</div>
-        <p class="result-label">App signups in 72 hours.</p>
-        <p class="result-context">Mobile launch</p>
-      </div>
-      <div class="result-card">
-        <div class="result-num serif">500K+</div>
-        <p class="result-label">Followers grown across managed accounts.</p>
-        <p class="result-context">Multiple verticals</p>
-      </div>
-      <div class="result-card">
-        <div class="result-num serif">1–3 days</div>
-        <p class="result-label">SaaS shipping cycles — spec to production.</p>
-        <p class="result-context">Velocity benchmark</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- How We Start -->
-<section class="cream-section" id="principles">
+<section class="cta-section" id="start">
   <div class="wrap">
     <div class="reveal">
       <div class="section-eyebrow">How we start</div>
-      <div class="section-title serif">Working with us.</div>
-      <div class="steps-tagline">Selective, fast, and built to last.</div>
+      <div class="section-title serif">Start here.</div>
     </div>
-    <div class="steps-grid reveal">
-      <div>
-        <div class="step-num">01</div>
-        <div class="step-title serif">Reach out.</div>
-        <p class="step-desc">Email us. No forms, no pitch deck. Just tell us what you're working on.</p>
+    <div class="steps-list reveal">
+      <div class="step-item">
+        <div class="step-head">
+          <span class="step-num">01</span>
+          <span class="step-title serif">Book a consultation.</span>
+        </div>
+        <p class="step-desc">Fill out a short intake form and book a 30-minute session. $50 flat fee.</p>
+        <p class="step-fine">No-shows forfeit the full amount.</p>
       </div>
-      <div>
-        <div class="step-num">02</div>
-        <div class="step-title serif">Initial conversation.</div>
-        <p class="step-desc">A short call to understand the business, the goals, and the timeline.</p>
+      <div class="step-item">
+        <div class="step-head">
+          <span class="step-num">02</span>
+          <span class="step-title serif">We prepare, then we talk.</span>
+        </div>
+        <p class="step-desc">Before the call, we review your submitted challenges. On the call, we discuss your workflows, goals, and explore potential avenues together.</p>
       </div>
-      <div>
-        <div class="step-num">03</div>
-        <div class="step-title serif">Mutual fit.</div>
-        <p class="step-desc">We'll both know quickly if there's alignment. If there is, we move forward.</p>
+      <div class="step-item">
+        <div class="step-head">
+          <span class="step-num">03</span>
+          <span class="step-title serif">Mutual fit.</span>
+        </div>
+        <p class="step-desc">You walk away with initial direction, a few concrete insights on where to look, and a follow-up proposal with engagement terms.</p>
+      </div>
+      <div class="cta-email-block">
+        <p class="cta-email-label">For now — reach out directly.</p>
+        <a href="mailto:support@spaceluxx.com" class="cta-email">support@spaceluxx.com</a>
+        <p class="cta-advisory">For emerging leaders and solo operators seeking structured mentorship — ask about our advisory track.</p>
       </div>
     </div>
   </div>
@@ -609,8 +635,8 @@
         <div class="faq-a">Brand launches, B2B and SaaS growth, AI system builds, mobile and SaaS development, creative infrastructure, and operator-level advisory. We work across consumer, enterprise, healthcare, construction, finance, and education. What matters is the quality of the leadership — not the vertical.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why selective?</div>
-        <div class="faq-a">We look for alignment on execution speed, operational autonomy, and commitment to the work. Our systems require decisive leadership to succeed — when that's in place, the results are disproportionate. When it's not, no strategy survives.</div>
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why the $50 consultation fee?</div>
+        <div class="faq-a">It filters for serious intent. We prepare a custom walk-through before every call — your $50 buys real preparation time, not a sales pitch. You'll leave with actionable direction regardless of whether we work together.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Where are you based?</div>
@@ -625,17 +651,6 @@
         <div class="faq-a">Project-based work runs 4–12 weeks. Retainers and advisory relationships run longer. We don't do one-off hourly consulting unless it fits within a broader engagement plan.</div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section class="contact-section" id="contact">
-  <div class="wrap reveal">
-    <div class="section-eyebrow">Get in touch</div>
-    <div class="contact-title serif">Start here.</div>
-    <p class="contact-desc">Every engagement begins with a conversation — no pitch, no deck. Reach out and we'll find out if there's a fit.</p>
-    <a href="mailto:support@spaceluxx.com" class="contact-email">support@spaceluxx.com</a>
-    <p class="contact-note">Referrals preferred · Serious inquiries welcome</p>
   </div>
 </section>
 
@@ -658,15 +673,11 @@
 <!-- Three.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-// ─── Hero: Starfield + Neural Nodes + Shooting Stars ───
 (function(){
   const c=document.getElementById('starfield');
   const r=new THREE.WebGLRenderer({canvas:c,antialias:true,alpha:true});
-  r.setPixelRatio(Math.min(window.devicePixelRatio,2));
-  r.setClearColor(0x000000,0);
-  const s=new THREE.Scene();
-  const cam=new THREE.PerspectiveCamera(60,1,0.1,1000);
-  cam.position.z=8;
+  r.setPixelRatio(Math.min(window.devicePixelRatio,2));r.setClearColor(0x000000,0);
+  const s=new THREE.Scene(),cam=new THREE.PerspectiveCamera(60,1,0.1,1000);cam.position.z=8;
   function resize(){const w=c.parentElement.clientWidth,h=c.parentElement.clientHeight;r.setSize(w,h);cam.aspect=w/h;cam.updateProjectionMatrix();}
   resize();window.addEventListener('resize',resize);
 
@@ -676,71 +687,48 @@
   sg.setAttribute('position',new THREE.BufferAttribute(sp,3));sg.setAttribute('alpha',new THREE.BufferAttribute(sa,1));sg.setAttribute('size',new THREE.BufferAttribute(ss,1));
   const sm=new THREE.ShaderMaterial({transparent:true,depthWrite:false,
     uniforms:{uTime:{value:0},uC:{value:new THREE.Color(0xE8D4A8)}},
-    vertexShader:`attribute float alpha;attribute float size;varying float vA;uniform float uTime;
-      void main(){vA=alpha*(.4+.6*sin(uTime*.3+position.x*1.5+position.y*2.3));gl_PointSize=size*(1.+.25*sin(uTime*.5+position.z*4.));gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+    vertexShader:`attribute float alpha;attribute float size;varying float vA;uniform float uTime;void main(){vA=alpha*(.4+.6*sin(uTime*.3+position.x*1.5+position.y*2.3));gl_PointSize=size*(1.+.25*sin(uTime*.5+position.z*4.));gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
     fragmentShader:`uniform vec3 uC;varying float vA;void main(){float d=length(gl_PointCoord-.5)*2.;if(d>1.)discard;gl_FragColor=vec4(uC,vA*(1.-d*d));}`
-  });
-  s.add(new THREE.Points(sg,sm));
+  });s.add(new THREE.Points(sg,sm));
 
-  // Neural nodes
+  // Nodes
   const NC=90,ng=new THREE.BufferGeometry(),np=new Float32Array(NC*3),nb=new Float32Array(NC);
   for(let i=0;i<NC;i++){np[i*3]=(Math.random()-.5)*20;np[i*3+1]=(Math.random()-.5)*14;np[i*3+2]=(Math.random()-.5)*8-1;nb[i]=Math.random()<.12?1:0;}
   ng.setAttribute('position',new THREE.BufferAttribute(np,3));ng.setAttribute('isBronze',new THREE.BufferAttribute(nb,1));
   const nm=new THREE.ShaderMaterial({transparent:true,depthWrite:false,
     uniforms:{uTime:{value:0},uBr:{value:new THREE.Color(0xB8874A)},uBo:{value:new THREE.Color(0xE8E4DC)}},
-    vertexShader:`attribute float isBronze;varying float vB;varying float vA;uniform float uTime;
-      void main(){vB=isBronze;vA=.35+.25*sin(uTime*.5+position.x*3.);float sz=isBronze>.5?4.:2.5;gl_PointSize=sz*(1.+.15*sin(uTime*.7+position.y*2.));gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
-    fragmentShader:`uniform vec3 uBr;uniform vec3 uBo;varying float vB;varying float vA;
-      void main(){float d=length(gl_PointCoord-.5)*2.;if(d>1.)discard;vec3 col=mix(uBo,uBr,vB);float g=(1.-d)*(1.+.6*(1.-d));gl_FragColor=vec4(col,vA*g);}`
+    vertexShader:`attribute float isBronze;varying float vB;varying float vA;uniform float uTime;void main(){vB=isBronze;vA=.35+.25*sin(uTime*.5+position.x*3.);float sz=isBronze>.5?4.:2.5;gl_PointSize=sz*(1.+.15*sin(uTime*.7+position.y*2.));gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+    fragmentShader:`uniform vec3 uBr;uniform vec3 uBo;varying float vB;varying float vA;void main(){float d=length(gl_PointCoord-.5)*2.;if(d>1.)discard;vec3 col=mix(uBo,uBr,vB);float g=(1.-d)*(1.+.6*(1.-d));gl_FragColor=vec4(col,vA*g);}`
   });
-  const nodesPoints=new THREE.Points(ng,nm);
-  s.add(nodesPoints);
+  const nodesP=new THREE.Points(ng,nm);s.add(nodesP);
 
-  // Connecting lines
+  // Lines
   const MD=3.5,lp=[],lc=[];
-  for(let i=0;i<NC;i++)for(let j=i+1;j<NC;j++){
-    const dx=np[i*3]-np[j*3],dy=np[i*3+1]-np[j*3+1],dz=np[i*3+2]-np[j*3+2],d=Math.sqrt(dx*dx+dy*dy+dz*dz);
-    if(d<MD){lp.push(np[i*3],np[i*3+1],np[i*3+2],np[j*3],np[j*3+1],np[j*3+2]);
-      const b=nb[i]>.5||nb[j]>.5;const R=b?.72:.58,G=b?.53:.56,B=b?.29:.54;lc.push(R,G,B,R,G,B);}
-  }
+  for(let i=0;i<NC;i++)for(let j=i+1;j<NC;j++){const dx=np[i*3]-np[j*3],dy=np[i*3+1]-np[j*3+1],dz=np[i*3+2]-np[j*3+2],d=Math.sqrt(dx*dx+dy*dy+dz*dz);
+    if(d<MD){lp.push(np[i*3],np[i*3+1],np[i*3+2],np[j*3],np[j*3+1],np[j*3+2]);const b=nb[i]>.5||nb[j]>.5;const R=b?.72:.58,G=b?.53:.56,B=b?.29:.54;lc.push(R,G,B,R,G,B);}}
   if(lp.length){const lg=new THREE.BufferGeometry();lg.setAttribute('position',new THREE.Float32BufferAttribute(lp,3));lg.setAttribute('color',new THREE.Float32BufferAttribute(lc,3));
     s.add(new THREE.LineSegments(lg,new THREE.LineBasicMaterial({vertexColors:true,transparent:true,opacity:.08})));}
 
-  // Shooting stars
+  // Shooters
   const SH=4,shooters=[];
   for(let i=0;i<SH;i++){const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(6),3));
     const m=new THREE.LineBasicMaterial({color:Math.random()>.65?0xB8874A:0xE8D4A8,transparent:true,opacity:0});
     const l=new THREE.Line(g,m);s.add(l);shooters.push({line:l,geo:g,mat:m,active:false,x:0,y:0,z:0,dx:0,dy:0,life:0,maxLife:0,len:.5+Math.random()});}
-  function launchS(o){o.active=true;o.x=(Math.random()-.3)*18;o.y=Math.random()*10+3;o.z=-(Math.random()*5+2);
-    const a=-Math.PI*.15-Math.random()*.3,sp=.07+Math.random()*.1;o.dx=Math.cos(a)*sp;o.dy=Math.sin(a)*sp;o.life=0;o.maxLife=35+Math.random()*50;}
-  function updateS(){for(const o of shooters){if(!o.active){if(Math.random()<.002)launchS(o);continue;}
-    o.life++;o.x+=o.dx;o.y+=o.dy;const p=o.life/o.maxLife;
-    o.mat.opacity=(p<.15?p/.15:p>.6?1-(p-.6)/.4:1)*.65;
-    const P=o.geo.attributes.position.array;P[0]=o.x;P[1]=o.y;P[2]=o.z;P[3]=o.x-o.dx*o.len*9;P[4]=o.y-o.dy*o.len*9;P[5]=o.z;
-    o.geo.attributes.position.needsUpdate=true;if(o.life>=o.maxLife){o.active=false;o.mat.opacity=0;}}}
+  function launchS(o){o.active=true;o.x=(Math.random()-.3)*18;o.y=Math.random()*10+3;o.z=-(Math.random()*5+2);const a=-Math.PI*.15-Math.random()*.3,sp=.07+Math.random()*.1;o.dx=Math.cos(a)*sp;o.dy=Math.sin(a)*sp;o.life=0;o.maxLife=35+Math.random()*50;}
+  function updateS(){for(const o of shooters){if(!o.active){if(Math.random()<.002)launchS(o);continue;}o.life++;o.x+=o.dx;o.y+=o.dy;const p=o.life/o.maxLife;o.mat.opacity=(p<.15?p/.15:p>.6?1-(p-.6)/.4:1)*.65;const P=o.geo.attributes.position.array;P[0]=o.x;P[1]=o.y;P[2]=o.z;P[3]=o.x-o.dx*o.len*9;P[4]=o.y-o.dy*o.len*9;P[5]=o.z;o.geo.attributes.position.needsUpdate=true;if(o.life>=o.maxLife){o.active=false;o.mat.opacity=0;}}}
 
   // Nebula
   const nbMat=new THREE.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{uTime:{value:0}},
     vertexShader:`varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
     fragmentShader:`varying vec2 vUv;uniform float uTime;void main(){vec2 p=vUv-.5;float d=length(p);float g=exp(-d*3.)*.035+sin(uTime*.06+p.x*4.)*.008;gl_FragColor=vec4(.72,.53,.29,max(g,0.)*.5);}`
-  });
-  const neb=new THREE.Mesh(new THREE.PlaneGeometry(35,22),nbMat);neb.position.set(4,1,-10);s.add(neb);
+  });const neb=new THREE.Mesh(new THREE.PlaneGeometry(35,22),nbMat);neb.position.set(4,1,-10);s.add(neb);
 
-  let mx=0,my=0;
-  document.addEventListener('mousemove',e=>{mx=(e.clientX/window.innerWidth-.5)*2;my=(e.clientY/window.innerHeight-.5)*2;});
-
-  let t=0;
-  (function anim(){requestAnimationFrame(anim);t+=.016;
-    sm.uniforms.uTime.value=t;nm.uniforms.uTime.value=t;nbMat.uniforms.uTime.value=t;
-    sg.userData;
-    // Parallax the star field
-    const stars=s.children[0];stars.rotation.y=t*.005+mx*.015;stars.rotation.x=my*.01;
-    nodesPoints.rotation.y=t*.003+mx*.01;nodesPoints.rotation.x=my*.008;
-    updateS();r.render(s,cam);
-  })();
+  let mx=0,my=0;document.addEventListener('mousemove',e=>{mx=(e.clientX/window.innerWidth-.5)*2;my=(e.clientY/window.innerHeight-.5)*2;});
+  let t=0;(function anim(){requestAnimationFrame(anim);t+=.016;sm.uniforms.uTime.value=t;nm.uniforms.uTime.value=t;nbMat.uniforms.uTime.value=t;
+    const stars=s.children[0];stars.rotation.y=t*.005+mx*.015;stars.rotation.x=my*.01;nodesP.rotation.y=t*.003+mx*.01;nodesP.rotation.x=my*.008;updateS();r.render(s,cam);})();
 })();
 
-// Footer particles
+// Footer
 (function(){
   const c=document.getElementById('footer-particles');
   const r=new THREE.WebGLRenderer({canvas:c,antialias:true,alpha:true});
@@ -753,21 +741,17 @@
   g.setAttribute('position',new THREE.BufferAttribute(p,3));
   const fm=new THREE.ShaderMaterial({transparent:true,depthWrite:false,
     uniforms:{uTime:{value:0},uC:{value:new THREE.Color(0xE8D4A8)}},
-    vertexShader:`attribute float size;uniform float uTime;varying float vA;
-      void main(){vA=.25+.15*sin(uTime*.4+position.x*2.);gl_PointSize=1.8*(1.+.2*sin(uTime*.5+position.y*3.));gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+    vertexShader:`uniform float uTime;varying float vA;void main(){vA=.25+.15*sin(uTime*.4+position.x*2.);gl_PointSize=1.8*(1.+.2*sin(uTime*.5+position.y*3.));gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
     fragmentShader:`uniform vec3 uC;varying float vA;void main(){float d=length(gl_PointCoord-.5)*2.;if(d>1.)discard;gl_FragColor=vec4(uC,vA*(1.-d*d));}`
-  });
-  s.add(new THREE.Points(g,fm));
+  });s.add(new THREE.Points(g,fm));
   let t=0;(function a(){requestAnimationFrame(a);t+=.016;fm.uniforms.uTime.value=t;s.rotation.y=t*.003;r.render(s,cam);})();
 })();
 </script>
 
-<!-- Nav + Reveal -->
 <script>
 const nav=document.getElementById('nav'),heroEl=document.querySelector('.hero');
 new IntersectionObserver(([e])=>{nav.classList.toggle('hero-mode',e.isIntersecting);nav.classList.toggle('cream-mode',!e.isIntersecting);},{threshold:.05}).observe(heroEl);
 document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});},{threshold:.1}).observe(el));
 </script>
-
 </body>
 </html>
