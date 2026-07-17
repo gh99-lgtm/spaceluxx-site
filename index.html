@@ -175,10 +175,14 @@
     .hero { height: auto; min-height: 100vh; }
     .hero-sticky { position: relative; height: auto; min-height: 100vh; }
     .hero-mid { display: none; }
+    .proof-banner { position: static; padding-top: 48px; }
   }
 
   /* Proof banner */
-  .proof-banner { position: relative; z-index: 2; padding: 0 0 80px; }
+  .proof-banner {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    z-index: 2; padding: 0 0 60px;
+  }
   .proof-eyebrow {
     font-size: 10px; letter-spacing: 0.3em; font-weight: 500;
     text-transform: uppercase; color: var(--bone-dim);
@@ -629,7 +633,11 @@
   }
   @media (max-width: 600px) {
     .hero h1 { font-size: 3rem; }
-    .proof-grid { grid-template-columns: 1fr; }
+    .proof-grid { grid-template-columns: repeat(2, 1fr); }
+    .proof-card { padding: 14px 14px; }
+    .proof-num { font-size: 1.15rem; }
+    .proof-label { font-size: 0.68rem; }
+    .proof-banner { padding: 0 0 40px; }
     .cream-section, .cta-section { padding: 84px 0; }
     .hero-content { padding: 120px 0 40px; }
   }
@@ -736,7 +744,9 @@
         <h1 class="serif">The Future of <em>Revenue Scaling.</em></h1>
         <p class="hero-sub">We are the growth engine behind elite solopreneurs, high-earning creator brands, and businesses built to outpace their market.</p>
       </div>
-      <div class="proof-banner">
+    </div>
+    <div class="proof-banner">
+      <div class="wrap">
         <div class="proof-eyebrow">Results delivered for our clients</div>
         <div class="proof-grid">
           <div class="proof-card">
